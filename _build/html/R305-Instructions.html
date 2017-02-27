@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>R305-Instructions &mdash; Python-R305 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Python-R305 1.0.0 documentation" href="index.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Python-R305.html" />
+    <link rel="prev" title="Introduction" href="Introduction.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="r305-instructions">
+<h1>R305-Instructions<a class="headerlink" href="#r305-instructions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="fingerprint-processing-instructions">
+<h2>Fingerprint Processing Instructions<a class="headerlink" href="#fingerprint-processing-instructions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="genimg">
+<h3>GenImg<a class="headerlink" href="#genimg" title="Permalink to this headline">¶</a></h3>
+<p>To collect Finger Image:</p>
+<blockquote>
+<div><p>this instruction is used for detecting the finger and store the detected finger image in ImageBuffer while returning successfull confirmation code; If there is no finger, returned conirmation code would be &#8220;can&#8217;t detect finger&#8221;.</p>
+<p>Python API: r305.genImg</p>
+</div></blockquote>
+</div>
+<div class="section" id="upimage">
+<h3>UpImage<a class="headerlink" href="#upimage" title="Permalink to this headline">¶</a></h3>
+<p>Upload Image:</p>
+<blockquote>
+<div><p>this instruction is used to upload the image in Img_Buffer to upper computer</p>
+<p>Python API: not available yet.</p>
+</div></blockquote>
+</div>
+<div class="section" id="downimage">
+<h3>DownImage<a class="headerlink" href="#downimage" title="Permalink to this headline">¶</a></h3>
+<p>Download Image:</p>
+<blockquote>
+<div><p>to download image from upper computer to Img_Buffer.</p>
+<p>Python API: r305.DownImg</p>
+</div></blockquote>
+</div>
+<div class="section" id="img2tz">
+<h3>Img2Tz<a class="headerlink" href="#img2tz" title="Permalink to this headline">¶</a></h3>
+<p>To generate character file from  image:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>to generate char acter file from the original finger image</dt>
+<dd>in ImageBuffer and store the file in CharBuffer1 or CharBuffer2.</dd>
+</dl>
+<p>Python API: r305.Img2Tz</p>
+</div></blockquote>
+</div>
+<div class="section" id="regmodel">
+<h3>RegModel<a class="headerlink" href="#regmodel" title="Permalink to this headline">¶</a></h3>
+<p>To generate template:</p>
+<blockquote>
+<div><p>to combine information of character files from CharBuffer1 and CharBuffer2 and generate a template which is stored back in both CharBuffer1 and CharBuffer2.</p>
+<p>Python API: r305.RegModel</p>
+</div></blockquote>
+</div>
+<div class="section" id="upchar">
+<h3>UpChar<a class="headerlink" href="#upchar" title="Permalink to this headline">¶</a></h3>
+<p>To upload character or template:</p>
+<blockquote>
+<div><p>to upload the character file or template of CharBuffer1/CharBuffer2 to upper computer.</p>
+<p>Python API: r305.UpChar</p>
+</div></blockquote>
+</div>
+<div class="section" id="store">
+<h3>Store<a class="headerlink" href="#store" title="Permalink to this headline">¶</a></h3>
+<p>To store template:</p>
+<blockquote>
+<div><p>to store the template of specified buffer (Buffer1/Buffer2) at the designated location of Flash library.</p>
+<p>Python API: r305.Store</p>
+</div></blockquote>
+</div>
+<div class="section" id="loadchar">
+<h3>LoadChar<a class="headerlink" href="#loadchar" title="Permalink to this headline">¶</a></h3>
+<p>To read template from Flash library:</p>
+<blockquote>
+<div><p>to load template at the specified location (PageID) of Flash library to template buffer CharBuffer1/CharBuffer2.</p>
+<p>Python API: r305.LoadChar</p>
+</div></blockquote>
+</div>
+<div class="section" id="empty">
+<h3>Empty<a class="headerlink" href="#empty" title="Permalink to this headline">¶</a></h3>
+<p>To empty finger library:</p>
+<blockquote>
+<div><p>to delete all the template in the Flash library.</p>
+<p>Python API: r305.DeleteAll</p>
+</div></blockquote>
+</div>
+<div class="section" id="match">
+<h3>Match<a class="headerlink" href="#match" title="Permalink to this headline">¶</a></h3>
+<p>To carry out precise matching of two finger templates:</p>
+<blockquote>
+<div><p>to carry out precise matching of templates from CharBuffer1 and CharBuffer2 providing matching results.</p>
+<p>Python API: not available</p>
+</div></blockquote>
+</div>
+<div class="section" id="search">
+<h3>Search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h3>
+<p>To search finger library:</p>
+<blockquote>
+<div><p>to search the wholw finger library for the template that matches the one in the CharBuffer1 or CharBuffer2. When found PageId will be returned.</p>
+<p>Python API: r305.Search</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">R305-Instructions</a><ul>
+<li><a class="reference internal" href="#fingerprint-processing-instructions">Fingerprint Processing Instructions</a><ul>
+<li><a class="reference internal" href="#genimg">GenImg</a></li>
+<li><a class="reference internal" href="#upimage">UpImage</a></li>
+<li><a class="reference internal" href="#downimage">DownImage</a></li>
+<li><a class="reference internal" href="#img2tz">Img2Tz</a></li>
+<li><a class="reference internal" href="#regmodel">RegModel</a></li>
+<li><a class="reference internal" href="#upchar">UpChar</a></li>
+<li><a class="reference internal" href="#store">Store</a></li>
+<li><a class="reference internal" href="#loadchar">LoadChar</a></li>
+<li><a class="reference internal" href="#empty">Empty</a></li>
+<li><a class="reference internal" href="#match">Match</a></li>
+<li><a class="reference internal" href="#search">Search</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Introduction.html" title="previous chapter">Introduction</a></li>
+      <li>Next: <a href="Python-R305.html" title="next chapter">&lt;no title&gt;</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/R305-Instructions.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Girish Joshi.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/R305-Instructions.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
